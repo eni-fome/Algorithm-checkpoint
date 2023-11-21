@@ -1,0 +1,32 @@
+Algorithm SentenceAnalysis
+    Initialize variables:
+        sentenceLength := 0
+        wordCount := 0
+        vowelCount := 0
+        character := ReadCharacter()  // Assume a function ReadCharacter() reads one character at a time
+
+    WHILE character is not a point
+        // Increment the length counter for each character
+        sentenceLength := sentenceLength + 1
+
+        // Check if the character is a space to count words
+        IF character is a space
+            wordCount := wordCount + 1
+
+        // Check if the character is a vowel (assuming English vowels)
+        IF character is a vowel (a, e, i, o, u, or case-insensitive)
+            vowelCount := vowelCount + 1
+
+        character := ReadCharacter()  // Read the next character
+
+    // Increment the length for the point
+    sentenceLength := sentenceLength + 1
+
+    // Count the last word
+    wordCount := wordCount + 1
+
+    // Output the results
+    OUTPUT "Length of the sentence:", sentenceLength
+    OUTPUT "Number of words in the sentence:", wordCount
+    OUTPUT "Number of vowels in the sentence:", vowelCount
+END Algorithm
